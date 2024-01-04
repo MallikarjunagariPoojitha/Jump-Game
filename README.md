@@ -17,14 +17,3 @@ Input: nums = [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
-class Solution:
-    def canJump(self, nums: List[int]) -> bool:
-        goal=len(nums)-1
-        for i in range(len(nums)-1,-1,-1):
-            if i+nums[i]>=goal:
-                goal=i
-        if goal==0:
-            return True
-        else:
-            return False
- 
